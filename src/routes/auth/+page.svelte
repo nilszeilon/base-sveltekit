@@ -5,9 +5,11 @@
 
 <div class="min-h-screen hero bg-base-200">
   <div class="hero-content flex-col">
-    <div class="card w-full max-w-sm shadow-2xl bg-base-100">
+    <div
+      class="card w-full max-w-lg min-h-[24rem] min-w-[24rem] shadow-2xl bg-base-100"
+    >
       <div class="card-body">
-        <h2 class="card-title text-2xl font-bold text-center">Welcome</h2>
+        <h2 class=" text-2xl font-bold text-center">Welcome</h2>
         <p class="text-center text-sm opacity-70">Please sign in to continue</p>
 
         <form method="POST" action="?/login" use:enhance class="space-y-4">
@@ -24,7 +26,6 @@
               class="input input-bordered w-full"
             />
           </div>
-
           {#if form?.error}
             <div class="alert alert-error shadow-lg">
               <svg
@@ -41,9 +42,7 @@
               >
               <span>{form.message}</span>
             </div>
-          {/if}
-
-          {#if form?.success}
+          {:else if form?.success}
             <div class="alert alert-success shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +58,11 @@
               >
               <span>{form.message}</span>
             </div>
+          {:else}
+            <div class="form-control mt-6">
+              <button type="submit" class="btn btn-primary"> Sign in </button>
+            </div>
           {/if}
-
-          <div class="form-control mt-6">
-            <button type="submit" class="btn btn-primary"> Sign in </button>
-          </div>
         </form>
       </div>
     </div>

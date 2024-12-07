@@ -32,4 +32,4 @@
   {/if}
 </nav>
 
-<slot />
+{@render children()}
