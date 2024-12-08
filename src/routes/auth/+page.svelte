@@ -62,6 +62,9 @@
             <div class="form-control mt-6">
               <button type="submit" class="btn btn-primary"> Sign in </button>
             </div>
+            <p class="opacity-70">
+              If you already have an account we will log you in.
+            </p>
           {/if}
         </form>
       </div>

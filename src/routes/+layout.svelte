@@ -17,12 +17,13 @@
   });
 </script>
 
-<div class="navbar bg-base-100 shadow-lg">
+<div class="navbar bg-base-100 shadow-lg px-8">
   <div class="navbar-start">
     <a href="/" class="btn btn-ghost normal-case text-xl">YourApp</a>
   </div>
-  
-  <div class="navbar-end">
+
+  <div class="navbar-end gap-4">
+    <a href="/pricing" class="btn btn-ghost">Pricing</a>
     {#if !session}
       <a href="/auth" class="btn btn-primary">Login</a>
     {:else}
